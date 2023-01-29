@@ -3,9 +3,48 @@
 <head>
 <meta charset="utf-8">
 <title>bohr template</title>
+<style type="text/css">
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #c8ccd4;
+  border-radius: 3px;
+  font-size: 15px;
+  line-height: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #00b09b 0%, #96c93d 100%); 
+  color: white;
+}
+</style>
+<script>
+  async function onSubmit(event) {
+    event.preventDefault();
+    try {
+      const response = await fetch("/api?prompt=" + document.getElementById('prompt').value, {
+        method: "GET",
+      });
+
+      const data = await response.json();
+      if (response.status !== 200) {
+        throw data.error || new Error(`Request failed with status ${response.status}`);
+      }
+
+      document.getElementById('result').innerText = data.result;
+    } catch(error) {
+      console.error(error);
+      alert(error.message);
+    }
+  }
+</script>
 </head>
 <body>
-<p>Hello world!</p>
-<p><a href="/api">api</a></p>
+  <form onsubmit="onSubmit(event)">
+    <p>OpenAI - GTP3 Prompt</p>
+    <input type="text" id="prompt" value="Sugira um slogan para uma plataforma de deploy serverless" />
+    <input type="submit" value="Submit" />
+  </form>
+  <div id="result"></div>
 </body>
 </html>

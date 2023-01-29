@@ -14,7 +14,7 @@ api.get('/', async (req, res) => {
 		prompt: req.query.prompt,
 		max_tokens: 256
 	});
-	return { status: completion.data.choices[0].text };
+	return { result: completion.data.choices[0].text };
 })
 
 export async function handler(event: APIGatewayEvent, context: Context) {
