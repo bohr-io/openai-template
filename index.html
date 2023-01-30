@@ -17,7 +17,7 @@ h1{
   letter-spacing: -2px;
   color: #FFF;
   font-weight:bold;
-  margin:128px auto 8px;
+  margin:88px auto 8px;
 }
 p{
   font:16px Helvetica, Arial, sans-serif;
@@ -128,6 +128,13 @@ input[type="submit"]:focus{
   async function onSubmit(event) {
     event.preventDefault();
     try {
+      if (document.getElementById('prompt').value == '') {
+        document.getElementById('prompt').style.border = '1px solid red';
+        document.getElementById('prompt').focus();
+        return;
+      }
+      document.getElementById('prompt').style.border = 'none';
+      document.getElementById('result').innerText = 'carregando...';
       const response = await fetch("/api?prompt=Sugira um slogan para " + document.getElementById('prompt').value, {
         method: "GET",
       });
