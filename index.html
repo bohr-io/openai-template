@@ -109,7 +109,7 @@ input[type="submit"] {
   async function onSubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("/api?prompt=" + document.getElementById('prompt').value, {
+      const response = await fetch("/api?prompt=Sugira um slogan para " + document.getElementById('prompt').value, {
         method: "GET",
       });
 
@@ -130,7 +130,7 @@ input[type="submit"] {
   <form onsubmit="onSubmit(event)">
     <h1>SloganCreator</h1>
     <p>uses OpenAI - GTP3 and is powered by bohr.io</p>
-    <input type="text" id="prompt" value="Sugira um slogan para uma plataforma de deploy serverless" />
+    <input type="text" id="prompt" value="plataforma de deploy serverless" />
     <input type="submit" value="Create Slogan" />
   </form>
   <div id="result_wrapper">
