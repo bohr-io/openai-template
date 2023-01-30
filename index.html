@@ -1,8 +1,11 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SloganCreator</title>
+<link rel="icon" href="https://bohr.io/favicon.ico">
 <style type="text/css">
 *, :before, :after {box-sizing:border-box;margin:0;padding:0;border:0;}
 body {
@@ -25,7 +28,7 @@ p{
 }
 input[type="text"] {
   display:block;
-  width: 880px;
+  width: 80%;
   height: 76px;
   margin:64px auto 16px;
   background: rgba(255,255,255,0.1);
@@ -64,7 +67,7 @@ input[type="submit"] {
   letter-spacing: -2px;
   color: #FFFFFF;
   position: relative;
-  max-width: 880px;
+  width:60%;
   display: inline-block;
 }
 #result:after, #result:before{
@@ -94,6 +97,10 @@ input[type="submit"] {
 }
 #brands a:hover {
   opacity:0.48;
+}
+#waves_wrapper{
+  width: 100%;
+  overflow: hidden;
 }
 #waves {
   width: 100%;
@@ -130,7 +137,7 @@ input[type="submit"] {
   <form onsubmit="onSubmit(event)">
     <h1>SloganCreator</h1>
     <p>uses OpenAI - GTP3 and is powered by bohr.io</p>
-    <input type="text" id="prompt" value="plataforma de deploy serverless" />
+    <input type="text" id="prompt" value="" placeholder="plataforma de deploy serverless" />
     <input type="submit" value="Create Slogan" />
   </form>
   <div id="result_wrapper">
@@ -147,6 +154,7 @@ input[type="submit"] {
         </svg>        
     </a>
   </div>
+  <div id="waves_wrapper">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;display:block;z-index:1;position:relative" width="1920" height="320" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 320">
     <g transform="translate(960,160) scale(1,1) translate(-960,-160)"><path d="M-100 5.2C-28.21 9.16 -27.87 7.86 41.33 7.86S112.04 2.36 182.67 2.36S254.01 9.59 324 9.59S396.28 13.61 465.33 13.61S537.56 11.28 606.67 11.28S677.59 12.14 748 12.14S819.56 11.75 889.33 11.75S961.55 16.88 1030.67 16.88S1101.9 4.68 1172 4.68S1243.54 5.72 1313.33 5.72S1385.08 7.27 1454.67 7.27S1526.25 10.15 1596 10.15S1667.09 1.67 1737.33 1.67S1808.97 1.26 1878.67 1.26S1950.09 4.13 2020 4.13S2091.63 3.23 2161.33 3.23L2020 320 L-100 320 Z" fill="#15222a" stroke-width="0">
       <animate attributeName="d" dur="34.48275862068965s" repeatCount="indefinite" values="M-100 5.2C-28.21 9.16 -27.87 7.86 41.33 7.86S112.04 2.36 182.67 2.36S254.01 9.59 324 9.59S396.28 13.61 465.33 13.61S537.56 11.28 606.67 11.28S677.59 12.14 748 12.14S819.56 11.75 889.33 11.75S961.55 16.88 1030.67 16.88S1101.9 4.68 1172 4.68S1243.54 5.72 1313.33 5.72S1385.08 7.27 1454.67 7.27S1526.25 10.15 1596 10.15S1667.09 1.67 1737.33 1.67S1808.97 1.26 1878.67 1.26S1950.09 4.13 2020 4.13S2091.63 3.23 2161.33 3.23L2020 320 L-100 320 Z;M-100 7.24C-28.54 4.3 -28.46 15.97 41.33 15.97S113.16 14.78 182.67 14.78S254.4 12.87 324 12.87S395.44 5.99 465.33 5.99S537.6 3.52 606.67 3.52S678.68 2.25 748 2.25S819.33 2.39 889.33 2.39S960.66 4.87 1030.67 4.87S1101.58 10.33 1172 10.33S1243.97 16.4 1313.33 16.4S1384.37 12.32 1454.67 12.32S1525.64 14.59 1596 14.59S1667.98 7.15 1737.33 7.15S1808.13 4.57 1878.67 4.57S1950.35 5.16 2020 5.16S2090.84 16.57 2161.33 16.57L2020 320 L-100 320 Z;M-100 5.2C-28.21 9.16 -27.87 7.86 41.33 7.86S112.04 2.36 182.67 2.36S254.01 9.59 324 9.59S396.28 13.61 465.33 13.61S537.56 11.28 606.67 11.28S677.59 12.14 748 12.14S819.56 11.75 889.33 11.75S961.55 16.88 1030.67 16.88S1101.9 4.68 1172 4.68S1243.54 5.72 1313.33 5.72S1385.08 7.27 1454.67 7.27S1526.25 10.15 1596 10.15S1667.09 1.67 1737.33 1.67S1808.97 1.26 1878.67 1.26S1950.09 4.13 2020 4.13S2091.63 3.23 2161.33 3.23L2020 320 L-100 320 Z"></animate>
@@ -180,6 +188,7 @@ input[type="submit"] {
       <animateTransform attributeName="transform" type="translate" dur="3.4482758620689653s" begin="-3.1034482758620685s" repeatCount="indefinite" values="0;10;0" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"></animateTransform>
     </path></g>
     </svg>
-    <div id="waves_end"></div>
+  </div>
+  <div id="waves_end"></div>
 </body>
 </html>
