@@ -1,6 +1,6 @@
-# [openai.bohr.io](https://openai.bohr.io)
+# SloganCreator
 
-Este projeto gera slogans e completa frases usando IA.
+Este projeto gera slogans usando IA!
 
 ## Como funciona?
 
