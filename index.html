@@ -49,7 +49,7 @@ input[type="submit"] {
   background: linear-gradient(180deg, #F26419 0%, #E84855 100%);
   border-radius: 2px;
   padding:15px 30px;
-  font-size: 16px/18px Helvetica, Arial, sans-serif;
+  font: 16px/18px Helvetica, Arial, sans-serif;
   text-align: center;
   text-transform: uppercase;
   font-weight:bold;
@@ -57,7 +57,18 @@ input[type="submit"] {
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
   margin:0 auto 72px;
   display:block;
+  cursor:pointer;
 }
+input[type="submit"]:hover{
+  background: linear-gradient(0deg, rgba(232, 72, 85, 0.5), rgba(232, 72, 85, 0.5)), linear-gradient(180deg, #F26419 0%, #E84855 100%);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4), 0px 0px 20px #F4CC3A;
+}
+input[type="submit"]:focus{
+  background: linear-gradient(0deg, rgba(232, 72, 85, 0.5), rgba(232, 72, 85, 0.5)), linear-gradient(180deg, #F26419 0%, #E84855 100%);
+  box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
 #result_wrapper {
   text-align:center;
 }
