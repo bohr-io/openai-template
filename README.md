@@ -12,7 +12,7 @@ Faça deploy usando o [bohr.io](https://bohr.io):
 
 [![Deploy to bohr.io](https://bohr.io/button.png)](https://bohr.io/createRepository?sampleUrl=https://github.com/bohr-io/openai-template)
 
-Para este template você também precisará criar uma conta na [OpenAI](https://beta.openai.com/account/api-keys) e gerar um access token. Atualmente a OpenAI está dando $18 de crédito para novas contas, aproveite!
+Para este template você também precisará criar uma conta na [OpenAI](https://beta.openai.com/account/api-keys) e gerar um access token. Atualmente a OpenAI está dando US$18 de crédito para novas contas, aproveite!
 
 ## Para rodar localmente
 
